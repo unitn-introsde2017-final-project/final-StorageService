@@ -34,7 +34,7 @@ public class HelloWorldStandalone
         {
             HOSTNAME = "localhost";
         }
-        String PORT = "9001/";
+        String PORT = "9001";
         //String BASE_URL = "/sdelab/";
 
         // We need this so the App will run on Heroku properly where we got the assigned port
@@ -44,7 +44,7 @@ public class HelloWorldStandalone
         }
 
         // Assemble the final endpoint URL
-        URI baseUrl = new URI(PROTOCOL + HOSTNAME + ":" + PORT);
+        URI baseUrl = new URI(PROTOCOL + HOSTNAME + ":" + PORT + "/");
         // End publish the endpoint
         ResourceConfig rc = new ResourceConfig(HelloWorld.class);
         JdkHttpServerFactory.createHttpServer(baseUrl, rc);
