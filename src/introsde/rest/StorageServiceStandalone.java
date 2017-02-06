@@ -7,7 +7,7 @@ import java.net.URISyntaxException;
 import org.glassfish.jersey.jdkhttp.JdkHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
-public class HelloWorldStandalone
+public class StorageServiceStandalone
 {
     /*public static void main(String[] args) throws IllegalArgumentException, IOException, URISyntaxException
     {
@@ -46,8 +46,13 @@ public class HelloWorldStandalone
         // Assemble the final endpoint URL
         URI baseUrl = new URI(PROTOCOL + HOSTNAME + ":" + PORT + "/");
         // End publish the endpoint
-        ResourceConfig rc = new ResourceConfig(HelloWorld.class);
-        JdkHttpServerFactory.createHttpServer(baseUrl, rc);
+        //ResourceConfig rc = new ResourceConfig(HelloWorld.class);
+        JdkHttpServerFactory.createHttpServer(baseUrl, createApp());
         System.out.println("server starts on " + baseUrl + "\n [kill the process to exit]");
+    }
+	
+	public static ResourceConfig createApp() {
+    	System.out.println("Starting StorageService REST services...");
+        return new StorageServiceConfig();
     }
 }

@@ -128,8 +128,8 @@
 	</target>
 	
 	<target name="start" depends="install">
-		<echo message="introsde.rest.HelloWorldStandalone in ${build.dir}" />
-		<java classname="introsde.rest.HelloWorldStandalone" classpath="${build.dir}" fork="true">
+		<echo message="introsde.rest.StorageServiceStandalone in ${build.dir}" />
+		<java classname="introsde.rest.StorageServiceStandalone" classpath="${build.dir}" fork="true">
 			<arg value="$JAVA_OPTS  -cp" />
 		    <classpath>
 		    	<path location="build" />
