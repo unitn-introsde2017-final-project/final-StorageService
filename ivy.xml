@@ -38,6 +38,9 @@
 		<!--<dependency org="org.glassfish.jersey.containers" name="jersey-container-grizzly2-http" rev="2.11"/>-->
 		<dependency org="org.glassfish.jersey.containers" name="jersey-container-jdk-http" rev="2.11"/>
 		
+		<!-- Manage JSON -->
+		<dependency org="org.json" name="json" rev="20140107"/>
+		
         <!-- Other dependencies -->
         <dependency org="org.xerial" name="sqlite-jdbc" rev="3.7.2"/>
         <dependency org="javax.ejb" name="javax.ejb-api" rev="3.2"/>
